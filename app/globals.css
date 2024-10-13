@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@layer utilities{
+ 
+html {
+    scroll-behavior: smooth;
+  }
+
+    .page-content {
+      padding-top: 80px;
+      /* Adjust based on the height of your navbar */
+    }
+        #services {
+          padding-top: 80px;
+          /* Push the services section down below the navbar */
+          z-index: 1;
+        }
+        .navbar {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 80px;
+          /* Adjust height as necessary */
+          .bg-blue-900 {
+              --tw-bg-opacity: 1;
+              background-color: rgb(30 58 138 / var(--tw-bg-opacity));
+            }
+          /* Semi-transparent background */
+          z-index: 10;
+        }
+
+            .text-12 {
+              @apply text-[12px] leading-[16px];
+            }
+
+      .text-16 {
+          @apply text-[16px] leading-[24px];
+        }
+        /* Auth Form */
+      .auth-form {
+           @apply flex min-h-screen w-full max-w-[420px] flex-col justify-center gap-5 py-10 md:gap-8;
+        }
+                 /* Auth Form */
+      .auth-form {
+            @apply flex min-h-screen w-full max-w-[420px] flex-col justify-center gap-5 py-10 md:gap-8;
+        }
+      .input-class {
+        @apply text-16 placeholder:text-16 rounded-lg border border-gray-300 text-gray-900 placeholder:text-gray-500;
+      }
+      .form-item {
+        @apply flex flex-col gap-1.5;
+      }
+                
+      .form-label {
+        @apply text-14 w-full max-w-[280px] font-medium text-gray-700;
+      }
+                
+      .form-message {
+        @apply text-12 text-red-500;
+      }
+                
+      .form-btn {
+        @apply text-16 rounded-lg border border-bankGradient bg-bank-gradient font-semibold text-white shadow-form;
+      }
+  
+}
